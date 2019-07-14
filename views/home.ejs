@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="app.css">
+<h1>To Do List</h1>
+
+<% todos.forEach(function(todo) { %>
+    <div class="task-list">
+        <li><%= todo.toUpperCase() %></li>
+    </div>
+<% }); %>
+
+
+<form action="/addtask" method="POST">
+    <input type="text" name="newtask" placeholder="Add Task">
+    <button>Click to add task</button>
+</form>
